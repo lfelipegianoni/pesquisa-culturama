@@ -125,6 +125,17 @@
                 <br>
                 <input id="x" type="checkbox" name="social" value="x">
                 <label for="x">X</label>
+                <br>
+
+                <label for="musicStyle">Estilo musical:</label>
+                <input list="styleTypes" id="musicStyle" name="userMusicStyle" type="text">
+                <!-- Usado para crial um alto complet para o input de musicStyle, em que eu passo o id do datalist para o list do input -->
+                <datalist id="styleTypes">
+                    <option value="rock"></option>
+                    <option value="pop"></option>
+                    <option value="samba"></option>
+                    <option value="sertanejo"></option>
+                </datalist>
             </fieldset>
             <button type="submit">Enviar</button>
         </form>
