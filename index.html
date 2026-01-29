@@ -10,23 +10,13 @@
         <h1>Pesquisa Online</h1>
     </header>
     <section>
-        <!--action e o atributo que recebe uma url de destino dos dados-->
-        <!--method é a forma de envio, os metodos sao get e post. O get pega os dados do formulario e vai colocando na url e o post vai os dados vao como um header em uma requisicao para o backend-->
         <form action="" method="get">'
-            <!-- Para um HTML ficar semantico para os mecanismos de busca em um formulario se utiliza fieldset que melhora tambem para os leitores de tela-->
             <fieldset>
-                <!-- legend adiciona uma legenda para o fieldset -->
                 <legend>Dados Pessoais</legend>
-                <!-- Dados Pessoais (control + ?)--> 
-                <!--a tag label e usada para fazer a descricao dos campos, o for do label e o nome do input que queremos descrever-->
-                <!-- required define o campo como obrigatorio -->
-                <!-- Ao inves de usar o vinculo do input (name) com o for da label por questoes de usabilidade o melhor é usar um id no input passando o nome do id para o for desta forma ao clicar na label voce sera mandado diretamente para digitar dentro do input melhorando a usabilidade-->
                 <label for="name">Nome</label>
-                <!--type define o tipo de input que vai ser usado, name e o nome que vai aparecer no campo-->
                 <input type="text" id="name" name="userName" required>
                 <br>
                 <label for="age">Idade</label>
-                <!-- Define um intervalo para os valores -->
                 <input type="number" id="age" name="userAge" min="12" max="100" required>
                 <br>
                 <label for="birthData">Data de Nascimento</label>
@@ -36,33 +26,23 @@
                 <input type="email" id="email" name="userEmail" required>
                 <br>
                 <label for="phoneNumber">Telefone</label>
-                <!-- O pattern define um limite de digitos [0-9] e o intervalo e {11} e o limite de digitos no campo -->
-                <!-- placeholder mostra um padrao no campo para o usuario seguir -->
                 <input type="tel" id="phoneNumber" name="userPhoneNumber" pattern="[0-9]{11}" placeholder="DDD+ numero sem espaços">
                 <br>
-                <!-- campo para imagens, o accept define o tipo de imagem que omeu campo vai aceita, image/* define que o campo aceita qualquer tipo de imagem -->
                 <label for="image">Upload de foto</label>
-                <!-- campo para imagens, o accept define o tipo de imagem que omeu campo vai aceita, image/* define que o campo aceita qualquer tipo de imagem -->
                 <input type="file" id="image" accept="image/*" name="userImage">
             </fieldset>
             <br>
             <fieldset>
                 <legend>Perfil</legend>
-                <!-- Quando se usa value nao e possivel escolher mais que uma opcao para o input do tipo radio -->
-                <!-- O input radio so sabe enviar verdadeiro ou falso, para ele enviar a informacao "feminino" voce tem que passar pelo value -->
                 <p>Genero:</p>
                 <input id="fem" type="radio" name="underGender" value="feminino">
                 <label for="fem">Feminino</label>
-
                 <input id="masc" type="radio" name="underGender" value="masculino">
                 <label for="masc">Masculino</label>
-
                 <input id="notInformed" type="radio" name="underGender" value="notInformed">
                 <label for="notInformed">Prefiro não informar</label>
-
                 <br>
                 <label for="maritalStatus">Estado civil:</label>
-                <!-- Lista suspensa -->
                 <select id="maritalStatus" name="userMaritalStatus">
                     <option value="notInformed">Selecione</option>
                     <option value="casado">Casado</option>
@@ -70,9 +50,7 @@
                     <option value="divorciado">Divorciado</option>
                     <option value="uniaoEstavel">Uniao Estavel</option>
                 </select>
-
                 <label for="state">Estado:</label>
-                <!-- Lista suspensa -->
                 <select id="state" name="userState">
                     <option value="notInformed">Selecione</option>
                     <option value="acre">Acre</option>
@@ -103,14 +81,10 @@
                     <option value="sergipe">Sergipe</option>
                     <option value="tocantins">Tocantins</option>
                 </select>
-
                 <label for="city">Cidade:</label>
                 <input id="city" type="text" id="userCity" name="userCity" autocomplete="address-level2">      
             </fieldset>
             <br>
-            
-            <!--O bottao e do tipo submissao, que siguinifica que vai enviar as informacoes-->
-
             <fieldset>
                 <legend>Habitos:</legend>
                 <p>Redes Sociais</p>
@@ -126,10 +100,8 @@
                 <input id="x" type="checkbox" name="social" value="x">
                 <label for="x">X</label>
                 <br>
-
                 <label for="musicStyle">Estilo musical:</label>
                 <input list="styleTypes" id="musicStyle" name="userMusicStyle" type="text">
-                <!-- Usado para crial um alto complet para o input de musicStyle, em que eu passo o id do datalist para o list do input -->
                 <datalist id="styleTypes">
                     <option value="rock"></option>
                     <option value="pop"></option>
@@ -138,11 +110,8 @@
                 </datalist>
                 <br>
                 <label for="favoriteColor">Cor favorita</label>
-                <!-- input:color (meio de criar um input mais rappido) -->
                 <input type="color" name="userFavorColor" id="favoriteColor">
-
             </fieldset>
-            <!-- O name do input, se todos forem iguais voce so vai poder escolher um input do tipo radio, se cada um tiver o seu proprio nome voce pode escolher todos -->
             <fieldset>
                 <legend>Opinião</legend>
                 <input id="otimo" type="radio" name="comment" value="otimo">
@@ -156,27 +125,20 @@
                 <br>
                 <input id="ruim" type="radio" name="comment" value="ruim">
                 <label for="ruim">Ruim</label>
-
                 <br>
                 <label for="comment">Escreva sua opinião:</label>
                 <textarea name="userComment" id="comment" placeholder="Digite aqui..."></textarea>
             </fieldset>
-
             <fieldset>
                 <legend>Confirmações</legend>
-
                 <input type="checkbox" name="userLgbd" id="userLgbdTerm" value="accepted" required>
                 <label for="userLgbdTerm">Eu aceito participar da pesquisa</label>
-
                 <br>
-
                 <input type="checkbox" name="userGetResult" id="getResult" value="accepted">
                 <label for="getResult">Desejo receber o resultado por email</label>
-
-
             </fieldset>
+
             <button type="submit">Enviar</button>
-            <!-- limpa os campos do formulario -->
             <button type="reset">Limpar</button>
         </form>
     </section>
