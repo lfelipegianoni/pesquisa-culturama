@@ -6,6 +6,48 @@
     <title>Pesquisa Culturama</title>
 </head>
 <body>
-    
+    <header>
+        <h1>Pesquisa Online</h1>
+    </header>
+    <section>
+        <!--action e o atributo que recebe uma url de destino dos dados-->
+        <!--method é a forma de envio, os metodos sao get e post. O get pega os dados do formulario e vai colocando na url e o post vai os dados vao como um header em uma requisicao para o backend-->
+        <form action="" method="get">'
+            <!-- Para um HTML ficar semantico para os mecanismos de busca em um formulario se utiliza fieldset que melhora tambem para os leitores de tela-->
+            <fieldset>
+                <!-- legend adiciona uma legenda para o fieldset -->
+                <legend>Dados Pessoais</legend>
+                <!-- Dados Pessoais (control + ?)--> 
+                <!--a tag label e usada para fazer a descricao dos campos, o for do label e o nome do input que queremos descrever-->
+                <!-- required define o campo como obrigatorio -->
+                <label for="userName">Nome</label>
+                <!--type define o tipo de input que vai ser usado, name e o nome que vai aparecer no campo-->
+                <input type="text" name="userName" required>
+                <br>
+                <label for="userAge">Idade</label>
+                <!-- Define um intervalo para os valores -->
+                <input type="number" name="userAge" min="12" max="100" required>
+                <br>
+                <label for="birthData">Data de Nascimento</label>
+                <input type="date" name="birthData">
+                <br>
+                <label for="userEmail">Email</label>
+                <input type="email" name="userEmail" required>
+                <br>
+                <label for="userPhoneNumber">Telefone</label>
+                <!-- O pattern define um limite de digitos [0-9] e o intervalo e {11} e o limite de digitos no campo -->
+                <!-- placeholder mostra um padrao no campo para o usuario seguir -->
+                <input type="tel" name="userPhoneNumber" pattern="[0-9]{11}" placeholder="DDD+ numero sem espaços">
+                <br>
+                <!-- campo para imagens, o accept define o tipo de imagem que omeu campo vai aceita, image/* define que o campo aceita qualquer tipo de imagem -->
+                <label for="userImage">Upload de foto</label>
+                <!-- campo para imagens, o accept define o tipo de imagem que omeu campo vai aceita, image/* define que o campo aceita qualquer tipo de imagem -->
+                <input type="file" accept="image/*" name="userImage">
+            </fieldset>
+            <br>
+            <!--O bottao e do tipo submissao, que siguinifica que vai enviar as informacoes-->
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
 </body>
 </html>
