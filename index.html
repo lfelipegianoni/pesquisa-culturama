@@ -142,6 +142,26 @@
                 <input type="color" name="userFavorColor" id="favoriteColor">
 
             </fieldset>
+            <!-- O name do input, se todos forem iguais voce so vai poder escolher um input do tipo radio, se cada um tiver o seu proprio nome voce pode escolher todos -->
+            <fieldset>
+                <legend>Satisfacao</legend>
+                <input id="otimo" type="radio" name="comment" value="otimo">
+                <label for="otimo">Ótima</label>
+
+                <input id="boa" type="radio" name="comment" value="boa">
+                <label for="boa">Boa</label>
+
+                <input id="regular" type="radio" name="comment" value="regular">
+                <label for="notInformed">Regular</label>
+
+                <input id="ruim" type="radio" name="comment" value="ruim">
+                <label for="ruim">Ruim</label>
+
+                <br>
+                <label for="comment">Comentario:</label>
+                <br>
+                <textarea name="userComment" id="comment" placeholder="Digite o seu comentario"></textarea>
+            </fieldset>
             <button type="submit">Enviar</button>
         </form>
     </section>
