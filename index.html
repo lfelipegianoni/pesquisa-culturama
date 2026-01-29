@@ -20,29 +20,30 @@
                 <!-- Dados Pessoais (control + ?)--> 
                 <!--a tag label e usada para fazer a descricao dos campos, o for do label e o nome do input que queremos descrever-->
                 <!-- required define o campo como obrigatorio -->
-                <label for="userName">Nome</label>
+                <!-- Ao inves de usar o vinculo do input (name) com o for da label por questoes de usabilidade o melhor é usar um id no input passando o nome do id para o for desta forma ao clicar na label voce sera mandado diretamente para digitar dentro do input melhorando a usabilidade-->
+                <label for="name">Nome</label>
                 <!--type define o tipo de input que vai ser usado, name e o nome que vai aparecer no campo-->
-                <input type="text" name="userName" required>
+                <input type="text" id="name" name="userName" required>
                 <br>
-                <label for="userAge">Idade</label>
+                <label for="age">Idade</label>
                 <!-- Define um intervalo para os valores -->
-                <input type="number" name="userAge" min="12" max="100" required>
+                <input type="number" id="age" name="userAge" min="12" max="100" required>
                 <br>
                 <label for="birthData">Data de Nascimento</label>
-                <input type="date" name="birthData">
+                <input type="date" id="birthData" name="userBirthData">
                 <br>
-                <label for="userEmail">Email</label>
-                <input type="email" name="userEmail" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="userEmail" required>
                 <br>
-                <label for="userPhoneNumber">Telefone</label>
+                <label for="phoneNumber">Telefone</label>
                 <!-- O pattern define um limite de digitos [0-9] e o intervalo e {11} e o limite de digitos no campo -->
                 <!-- placeholder mostra um padrao no campo para o usuario seguir -->
-                <input type="tel" name="userPhoneNumber" pattern="[0-9]{11}" placeholder="DDD+ numero sem espaços">
+                <input type="tel" id="phoneNumber" name="userPhoneNumber" pattern="[0-9]{11}" placeholder="DDD+ numero sem espaços">
                 <br>
                 <!-- campo para imagens, o accept define o tipo de imagem que omeu campo vai aceita, image/* define que o campo aceita qualquer tipo de imagem -->
-                <label for="userImage">Upload de foto</label>
+                <label for="image">Upload de foto</label>
                 <!-- campo para imagens, o accept define o tipo de imagem que omeu campo vai aceita, image/* define que o campo aceita qualquer tipo de imagem -->
-                <input type="file" accept="image/*" name="userImage">
+                <input type="file" id="image" accept="image/*" name="userImage">
             </fieldset>
             <br>
             <fieldset>
@@ -50,19 +51,19 @@
                 <!-- Quando se usa value nao e possivel escolher mais que uma opcao para o input do tipo radio -->
                 <!-- O input radio so sabe enviar verdadeiro ou falso, para ele enviar a informacao "feminino" voce tem que passar pelo value -->
                 <p>Genero:</p>
-                <input type="radio" name="underGender" value="feminino">
-                <label for="underGender">Feminino</label>
+                <input id="fem" type="radio" name="underGender" value="feminino">
+                <label for="fem">Feminino</label>
 
-                <input type="radio" name="underGender" value="masculino">
-                <label for="underGender">Masculino</label>
+                <input id="masc" type="radio" name="underGender" value="masculino">
+                <label for="masc">Masculino</label>
 
-                <input type="radio" name="underGender" value="notInformed">
-                <label for="underGender">Prefiro não informar</label>
+                <input id="notInformed" type="radio" name="underGender" value="notInformed">
+                <label for="notInformed">Prefiro não informar</label>
 
                 <br>
                 <label for="maritalStatus">Estado civil:</label>
                 <!-- Lista suspensa -->
-                <select name="maritalStatus">
+                <select id="maritalStatus" name="userMaritalStatus">
                     <option value="notInformed">Selecione</option>
                     <option value="casado">Casado</option>
                     <option value="solteiro">Solteiro</option>
@@ -70,9 +71,9 @@
                     <option value="uniaoEstavel">Uniao Estavel</option>
                 </select>
 
-                <label for="userState">Estado:</label>
+                <label for="state">Estado:</label>
                 <!-- Lista suspensa -->
-                <select name="userState">
+                <select id="state" name="userState">
                     <option value="notInformed">Selecione</option>
                     <option value="acre">Acre</option>
                     <option value="alagoas">Alagoas</option>
@@ -102,13 +103,45 @@
                     <option value="sergipe">Sergipe</option>
                     <option value="tocantins">Tocantins</option>
                 </select>
-                <label for="userCity">Cidade:</label>
-                <input type="text" id="userCity" name="userCity" autocomplete="address-level2">      
+
+                <label for="city">Cidade:</label>
+                <input id="city" type="text" id="userCity" name="userCity" autocomplete="address-level2">      
             </fieldset>
             <br>
-
             
             <!--O bottao e do tipo submissao, que siguinifica que vai enviar as informacoes-->
+
+            <fieldset>
+                <legend>Habitos:</legend>
+                <p>Redes Sociais</p>
+                <input id="instagran" type="checkbox" name="social" value="instagran">
+                <label for="instagran">Instagran</label>
+                <br>
+                <input id="facebook" type="checkbox" name="social" value="facebook">
+                <label for="facebook">Facebook</label>
+                <br>
+                <input id="linkedin" type="checkbox" name="social" value="linkedin">
+                <label for="linkedin">Linkedin</label>
+                <br>
+                <input id="x" type="checkbox" name="social" value="x">
+                <label for="x">X</label>
+                <br>
+
+                <label for="musicStyle">Estilo musical:</label>
+                <input list="styleTypes" id="musicStyle" name="userMusicStyle" type="text">
+                <!-- Usado para crial um alto complet para o input de musicStyle, em que eu passo o id do datalist para o list do input -->
+                <datalist id="styleTypes">
+                    <option value="rock"></option>
+                    <option value="pop"></option>
+                    <option value="samba"></option>
+                    <option value="sertanejo"></option>
+                </datalist>
+                <br>
+                <label for="favoriteColor">Cor favorita</label>
+                <!-- input:color (meio de criar um input mais rappido) -->
+                <input type="color" name="userFavorColor" id="favoriteColor">
+
+            </fieldset>
             <button type="submit">Enviar</button>
         </form>
     </section>
