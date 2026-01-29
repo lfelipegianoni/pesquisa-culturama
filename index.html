@@ -45,6 +45,24 @@
                 <input type="file" accept="image/*" name="userImage">
             </fieldset>
             <br>
+
+
+            <fieldset>
+                <legend>Perfil</legend>
+                <!-- Quando se usa value nao e possivel escolher mais que uma opcao para o input do tipo radio -->
+                <!-- O input radio so sabe enviar verdadeiro ou falso, para ele enviar a informacao "feminino" voce tem que passar pelo value -->
+                <p>Genero:</p>
+                <input type="radio" name="underGender" value="feminino">
+                <label for="underGender">Feminino</label>
+
+                <input type="radio" name="underGender" value="masculino">
+                <label for="underGender">Masculino</label>
+
+                <input type="radio" name="underGender" value="notInformed">
+                <label for="underGender">Prefiro não informar</label>
+            </fieldset>
+
+            <br>
             <!--O bottao e do tipo submissao, que siguinifica que vai enviar as informacoes-->
             <button type="submit">Enviar</button>
         </form>
