@@ -45,8 +45,6 @@
                 <input type="file" accept="image/*" name="userImage">
             </fieldset>
             <br>
-
-
             <fieldset>
                 <legend>Perfil</legend>
                 <!-- Quando se usa value nao e possivel escolher mais que uma opcao para o input do tipo radio -->
@@ -60,9 +58,56 @@
 
                 <input type="radio" name="underGender" value="notInformed">
                 <label for="underGender">Prefiro não informar</label>
-            </fieldset>
 
+                <br>
+                <label for="maritalStatus">Estado civil:</label>
+                <!-- Lista suspensa -->
+                <select name="maritalStatus">
+                    <option value="notInformed">Selecione</option>
+                    <option value="casado">Casado</option>
+                    <option value="solteiro">Solteiro</option>
+                    <option value="divorciado">Divorciado</option>
+                    <option value="uniaoEstavel">Uniao Estavel</option>
+                </select>
+
+                <label for="userState">Estado:</label>
+                <!-- Lista suspensa -->
+                <select name="userState">
+                    <option value="notInformed">Selecione</option>
+                    <option value="acre">Acre</option>
+                    <option value="alagoas">Alagoas</option>
+                    <option value="amapa">Amapá</option>
+                    <option value="amazonas">Amazonas</option>
+                    <option value="bahia">Bahia</option>
+                    <option value="ceara">Ceará</option>
+                    <option value="distritoFederal">Distrito Federal</option>
+                    <option value="espiritoSanto">Espirito Santo</option>
+                    <option value="goias">Goiás</option>
+                    <option value="maranhao">Maranhão</option>
+                    <option value="matoGrossoDoSul">Mato Grosso do Sul</option>
+                    <option value="matoGrosso">Mato Grosso</option>
+                    <option value="minasGerais">Minas Gerais</option>
+                    <option value="para">Pará</option>
+                    <option value="paraiba">Paraíba</option>
+                    <option value="parana">Paraná</option>
+                    <option value="pernambuco">Pernambuco</option>
+                    <option value="piaui">Piauí</option>
+                    <option value="rioDeJaneiro">Rio de Janeiro</option>
+                    <option value="rioGrandeDoNorte">Rio Grande do Norte</option>
+                    <option value="rioGrandeDoSul">Rio Grande do Sul</option>
+                    <option value="rondonia">Rondônia</option>
+                    <option value="roraima">Roraima</option>
+                    <option value="santaCatarina">Santa Catarina</option>
+                    <option value="saoPaulo">São Paulo</option>
+                    <option value="sergipe">Sergipe</option>
+                    <option value="tocantins">Tocantins</option>
+                </select>
+                <label for="userCity">Cidade:</label>
+                <input type="text" id="userCity" name="userCity" autocomplete="address-level2">      
+            </fieldset>
             <br>
+
+            
             <!--O bottao e do tipo submissao, que siguinifica que vai enviar as informacoes-->
             <button type="submit">Enviar</button>
         </form>
