@@ -53,10 +53,6 @@ legend{
     padding: 0 5px;
 }
 
-label{
-    display: inline-block;
-    margin-bottom: 5px;
-}
 
 p{
     display: inline-block;
@@ -85,6 +81,20 @@ input[type="color"]{
     padding: 0 5px;
 }
 
+label{
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+input[type="tel"]{
+    margin-bottom: 0;
+}
+
+small{
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
 /* usado para validar campos, quando a informacao informada pelo usuario nao condiz com o tipo do campo onde ele digitou automaticamnente o campo fica invalido, e para melhor representar esta situacao podemos utilizar a opcao abaixo mudando a cor do campo quando esta situacao ocorrer*/
 /* O meio a seguir a para campos de tipos expecificos */
 /*
@@ -99,6 +109,11 @@ input[type="number"]:valid{
 }
 */
 /* Meio para aplicar em todos os campos */
+
+input:focus{
+    border-color: cornflowerblue;
+    outline: none;
+}
 
 input:invalid, select:invalid, textarea:invalid{
     border-color: red;
