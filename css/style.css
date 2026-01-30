@@ -1,10 +1,6 @@
 *{
     margin: 0;
     padding: 0;
-    /*
-    Ela muda como o navegador calcula o tamanho dos elementos.
-    Basicamente: define se o width e height incluem ou não o padding e a border.
-    */
     box-sizing: border-box;
 }
 
@@ -53,7 +49,6 @@ legend{
     padding: 0 5px;
 }
 
-
 p{
     display: inline-block;
     margin-bottom: 5px;
@@ -70,9 +65,9 @@ input, select, textarea{
 textarea{
     min-height: 100px;
 }
-/* Usado para pegar um tipo de input especifico para passar stilo*/
+
 input[type="radio"], input[type="checkbox"]{
-    /*isso faz com o o input siga a largura natural dele*/
+
     width: auto;
 }
 
@@ -94,21 +89,6 @@ small{
     display: inline-block;
     margin-bottom: 20px;
 }
-
-/* usado para validar campos, quando a informacao informada pelo usuario nao condiz com o tipo do campo onde ele digitou automaticamnente o campo fica invalido, e para melhor representar esta situacao podemos utilizar a opcao abaixo mudando a cor do campo quando esta situacao ocorrer*/
-/* O meio a seguir a para campos de tipos expecificos */
-/*
-input[type="text"]:invalid,
-input[type="number"]:invalid{
-    border-color: red;
-}
-
-input[type="text"]:valid,
-input[type="number"]:valid{
-    border-color: green;
-}
-*/
-/* Meio para aplicar em todos os campos */
 
 input:focus{
     border-color: cornflowerblue;
