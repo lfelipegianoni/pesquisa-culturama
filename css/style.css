@@ -50,3 +50,30 @@ legend{
     font-size: 18px;
     padding: 0 5px;
 }
+
+label{
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+input, select, textarea{
+    width: 100px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+textarea{
+    min-height: 100px;
+}
+/* Usado para pegar um tipo de input especifico para passar stilo*/
+input[type="radio"], input[type="checkbox"]{
+    /*isso faz com o o input siga a largura natural dele*/
+    width: auto;
+}
+
+input[type="color"]{
+    width: 40px;
+    padding: 0 5px;
+}
